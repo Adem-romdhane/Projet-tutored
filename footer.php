@@ -52,7 +52,7 @@
             <li><a href="#">Sit quas consectetur</a></li>
           </ul>
         </div>
-
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nisi modi error labore mollitia delectus eius, aperiam voluptate fuga porro optio aspernatur placeat illo magni atque deserunt explicabo recusandae doloribus!
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nobis illum</h4>
           <ul>
@@ -79,3 +79,17 @@
     </div>
 
   </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  <!-- Preloader 
+  <div id="preloader"></div>-->
+
+  <!--<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script> -->
+
+  <!-- Main JS File -->
+  <?php wp_footer() ?>
+</body>
+
+</html>

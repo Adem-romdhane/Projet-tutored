@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Medilab Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Medilab
-  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body class="index-page">
 
   <?php get_header() ?>
   
@@ -52,17 +13,16 @@
       <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2>WELCOME TO MEDILAB</h2>
-          <p>We are team of talented designers making websites with Bootstrap</p>
+          <h2>Bienvenue à JM3D</h2>
+          <p>Pour les professionnels et particuliers</p>
         </div><!-- End Welcome -->
 
         <div class="content row gy-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <h3>Why Choose Medilab?</h3>
+              <h3>Pourquoi choisir JM3D?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+              JM3D offre des interventions rapides, efficaces et sécurisées contre les nuisibles, avec des solutions adaptées et respectueuses des normes en vigueur. Son expertise, son service client réactif et sa transparence tarifaire en font un partenaire de confiance pour une protection durable.
               </p>
               <div class="text-center">
                 <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
@@ -75,26 +35,26 @@
               <div class="row gy-4">
 
                 <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
-                    <i class="bi bi-clipboard-data"></i>
-                    <h4>Corporis voluptates officia eiusmod</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300"> 
+                    <i class="bi bi-clipboard-data"></i> 
+                    <h4>Dératisation</h4>
+                    <p>Rats,souris,mulots,autres...</p>
                   </div>
                 </div><!-- End Icon Box -->
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
                     <i class="bi bi-gem"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <h4>Désinsectisation</h4>
+                    <p>Élimination des insectes nuisibles (cafards,guêpes,punaises de lit, frelons asiatiques, chenille processionnaires)</p>
                   </div>
                 </div><!-- End Icon Box -->
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
                     <i class="bi bi-inboxes"></i>
-                    <h4>Labore consequatur incidid dolore</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <h4>Désinfection</h4>
+                    <p>Bactéries, virus, moisissures, autres...</p>
                   </div>
                 </div><!-- End Icon Box -->
 
@@ -933,24 +893,3 @@
 
   <?php get_footer() ?>
   
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
