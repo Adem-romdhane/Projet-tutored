@@ -1,6 +1,6 @@
 <?php 
     /**
-     * Fonction qui permet de charger le css, les fonctions javascript, les polices d'écritures... 
+     * Fonction qui permet de charger le css, les bibliothèques css, les fonctions javascript, les polices d'écritures... 
      */
     function theme_enqueue_styles_scripts() {
         // Charger les polices Google
@@ -13,6 +13,10 @@
         wp_enqueue_style('fontawesome', get_template_directory_uri() . '/assets/vendor/fontawesome-free/css/all.min.css', [], null);
         wp_enqueue_style('glightbox', get_template_directory_uri() . '/assets/vendor/glightbox/css/glightbox.min.css', [], null);
         wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/vendor/swiper/swiper-bundle.min.css', [], null);
+
+        //Test
+        wp_enqueue_style('flaticon-icons', 'https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css', [], null);
+    
         
         // Charger le CSS principal du thème
         wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], null);
@@ -46,4 +50,4 @@
     
 
 
-?>
+

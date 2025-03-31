@@ -13,14 +13,14 @@
       <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2>Bienvenue à JM3D</h2>
+          <h2>Bienvenue à <?php echo get_bloginfo('name'); ?></h2>
           <p>Pour les professionnels et particuliers</p>
         </div><!-- End Welcome -->
 
         <div class="content row gy-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <h3>Pourquoi choisir JM3D?</h3>
+              <h3>Pourquoi choisir <?php echo get_bloginfo('name'); ?>?</h3>
               <p>
               JM3D offre des interventions rapides, efficaces et sécurisées contre les nuisibles, avec des solutions adaptées et respectueuses des normes en vigueur. Son expertise, son service client réactif et sa transparence tarifaire en font un partenaire de confiance pour une protection durable.
               </p>
@@ -36,7 +36,7 @@
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="300"> 
-                    <i class="bi bi-clipboard-data"></i> 
+                  <i class="fi fi-rs-mouse-field"></i> 
                     <h4>Dératisation</h4>
                     <p>Rats,souris,mulots,autres...</p>
                   </div>
@@ -44,7 +44,7 @@
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
-                    <i class="bi bi-gem"></i>
+                  <i class="bi bi-bug"></i>
                     <h4>Désinsectisation</h4>
                     <p>Élimination des insectes nuisibles (cafards,guêpes,punaises de lit, frelons asiatiques, chenille processionnaires)</p>
                   </div>
@@ -52,7 +52,8 @@
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
-                    <i class="bi bi-inboxes"></i>
+                    <!--<i class="bi bi-inboxes"></i> -->
+                    <i class="bi bi-virus"></i>
                     <h4>Désinfection</h4>
                     <p>Bactéries, virus, moisissures, autres...</p>
                   </div>
