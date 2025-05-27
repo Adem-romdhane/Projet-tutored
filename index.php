@@ -30,40 +30,46 @@
             </div>
           </div><!-- End Why Box -->
 
-          <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="d-flex flex-column justify-content-center">
-              <div class="row gy-4">
+         <?php
+      // Monclar Yves Hary début //
 
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300"> 
-                    <i class="bi bi-clipboard-data"></i> 
-                    <h4>Dératisation</h4>
-                    <p>Rats,souris,mulots,autres...</p>
-                  </div>
-                </div><!-- End Icon Box -->
+              // Boucle personnalisée : services via Carbon Fields
+              $args = array(
+                  'post_type' => 'service',
+                  'posts_per_page' => 3,
+              );
+              $query = new WP_Query($args);
 
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
-                    <i class="bi bi-gem"></i>
-                    <h4>Désinsectisation</h4>
-                    <p>Élimination des insectes nuisibles (cafards,guêpes,punaises de lit, frelons asiatiques, chenille processionnaires)</p>
-                  </div>
-                </div><!-- End Icon Box -->
-
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
-                    <i class="bi bi-inboxes"></i>
-                    <h4>Désinfection</h4>
-                    <p>Bactéries, virus, moisissures, autres...</p>
-                  </div>
-                </div><!-- End Icon Box -->
-
+              if ($query->have_posts()) :
+                  $delay = 300;
+                  while ($query->have_posts()) : $query->the_post();
+                      $icon = carbon_get_post_meta(get_the_ID(), 'service_icon');
+                      $short_description = carbon_get_post_meta(get_the_ID(), 'service_short_description');
+              ?>
+              <div class="col-xl-4 d-flex align-items-stretch">
+                <div class="icon-box" data-aos="zoom-out" data-aos-delay="<?php echo $delay; ?>">
+                  <?php if ($icon) : ?>
+                    <i class="fa <?php echo esc_attr($icon); ?>"></i>
+                  <?php endif; ?>
+                  <h4><?php the_title(); ?></h4>
+                  <p><?php echo esc_html($short_description); ?></p>
+                  <a href="<?php the_permalink(); ?>" class="more-btn"><span>Voir plus</span></a>
+                </div>
               </div>
+              <?php
+                      $delay += 100;
+                  endwhile;
+                  wp_reset_postdata();
+              endif;
+              ?>
+
+
             </div>
           </div>
-        </div><!-- End  Content-->
-
+        </div>
       </div>
+    </div>
+  </section>
 
     </section><!-- /Hero Section -->
 

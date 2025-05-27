@@ -88,15 +88,7 @@
         return $items;
     }
 
-    // Activer Elementor pour le type de contenu "nuisible"
-function activer_elementor_nuisible() {
-    // Vérifie si Elementor est activé
-    if (defined('ELEMENTOR_PATH') && class_exists('Elementor\Plugin')) {
-        // Ajouter le support d'Elementor pour le type de contenu 'nuisible'
-        add_post_type_support('nuisible', 'elementor');
-    }
-}
-add_action('init', 'activer_elementor_nuisible');
+
 
 require_once get_template_directory() . '/fields.php';  // Ou le chemin correct si vous placez fields.php dans un sous-dossier
 //require_once get_template_directory() . '/assets/class-wp-bootstrap-navwalker.php';
@@ -107,4 +99,65 @@ require_once get_template_directory() . '/fields.php';  // Ou le chemin correct 
 
 
 
+
+
+//Yves
+// Monclar Yves Hary début //
+    
+    // Chargement de Carbon Fields
+    use Carbon_Fields\Container;
+    use Carbon_Fields\Field;
+    
+    add_action('after_setup_theme', function () {
+        // Initialisation de Carbon Fields
+        if ( class_exists( 'Carbon_Fields\Carbon_Fields' ) ) {
+            Carbon_Fields\Carbon_Fields::boot();
+        }
+    });
+    
+    // Créer un CPT pour les Services
+    function create_services_cpt() {
+        $args = array(
+            'labels' => array(
+                'name' => 'Services',
+                'singular_name' => 'Service',
+                'add_new' => 'Ajouter un service',
+                'add_new_item' => 'Ajouter un nouveau service',
+                'edit_item' => 'Modifier le service',
+                'new_item' => 'Nouveau service',
+                'view_item' => 'Voir le service',
+                'search_items' => 'Rechercher un service',
+                'not_found' => 'Aucun service trouvé',
+                'not_found_in_trash' => 'Aucun service trouvé dans la corbeille',
+                'all_items' => 'Tous les services',
+                'archives' => 'Archives des services',
+                'attributes' => 'Attributs du service',
+                'menu_name' => 'Services',
+                'name_admin_bar' => 'Service',
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'show_in_rest' => true, // Activer Gutenberg
+            'menu_icon' => 'dashicons-hammer', // Icône du menu
+            'supports' => array('title', 'editor', 'thumbnail'),
+        );
+        register_post_type('service', $args);
+    }
+    add_action('init', 'create_services_cpt');
+    
+    // Ajouter des champs personnalisés avec Carbon Fields pour les services
+    add_action('carbon_fields_register_fields', function () {
+        Container::make('post_meta', 'Détails du service')
+            ->where('post_type', '=', 'service')
+            ->add_fields(array(
+                Field::make('text', 'service_icon', 'Icône du service')
+                    ->set_help_text('Entrez l\'icône pour ce service (utilisez un code icône FontAwesome par exemple)'),
+                Field::make('textarea', 'service_short_description', 'Description courte')
+                    ->set_help_text('Une brève description de ce service'),
+                Field::make('rich_text', 'service_full_description', 'Description complète')
+                    ->set_help_text('Une description détaillée du service'),
+            ));
+    });
+
+// Monclar Yves Hary fin //
 

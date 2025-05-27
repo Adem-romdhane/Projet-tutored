@@ -19,9 +19,9 @@
   <?php wp_head()?>
 </head>
 
-<body class="index-page">
+<body  class="index-page">
   
-<header id="header" class="header sticky-top">
+<header id="header" class="header sticky-top mb-5">
 
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
@@ -41,7 +41,7 @@
 
     <div class="branding d-flex align-items-center">
 
-      <div class="container position-relative d-flex align-items-center justify-content-between">
+      <div class="container-lg position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->

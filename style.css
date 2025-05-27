@@ -79,10 +79,14 @@ Version: 1.0
   h4,
   h5,
   h6 {
-    color: var(--heading-color);
+    color: #74b82fff;
     font-family: var(--heading-font);
   }
   
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   /* Pulsating Play Button
   ------------------------------*/
   .pulsating-play-btn {
@@ -1648,84 +1652,33 @@ Version: 1.0
   .starter-section {
     /* Add your styles here */
   }
-/*--------------------------------------------------------------
-  # Style fait par adam
-  --------------------------------------------------------------*/
-  .flex-container {
-    margin-bottom: 50px;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
 
-    gap: 20px; /* espace entre les blocs */
-
+  .bg-primaire {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .flex-container h3{
-    color: #2a2a25;
-    font-family: Barlow, sans-serif;
-    font-weight: 600;
-    text-align: center;
-
-  }
-  
-  .bloc-prevention {
-    flex: 1; /* pour que chaque bloc prenne 50% de la largeur par défaut */
-    justify-content: space-around;     /* Centrer les éléments horizontalement */
-    /*background-color: #77B72D;*/
-    margin-top: -150px;
-
-  }
-
-
-  .bloc-traitement {
-    flex: 1; /* pour que chaque bloc prenne 50% de la largeur par défaut */
-    justify-content: space-around;     /* Centrer les éléments horizontalement */
-    /*background-color: #77B72D;*/
-    margin-top: -150px;
-  }
-
-  .symptomes{
-    padding: 48px 0;
-  }
-
-  .symptomes .centered {
-    text-align: center; /* Centre horizontalement le texte */
-    margin-bottom: 20px; /* Espace entre le titre et les symptômes */
+  .bg-success-custom {
+    background-color: rgba(108, 173, 42, 0.1);
 }
 
-.symptomes .symptoms-content {
-  max-width: 800px; /* Largeur maximale du contenu */
-  margin: 0 auto; /* Centrer horizontalement */
-  padding: 20px; /* Espacement interne */
-  text-align: justify; /* Centrer le texte du contenu */
-}
-.risques {
-  display: flex;
-  margin: 100px;
-  gap: 20px; /* espace entre les blocs */
-  justify-content: center;
+nav#navmenu .sub-menu a {
+  transition: all 300ms ease; /* Ajout de la transition */
 }
 
-.risques-sanitaires,
-.risques-matériels {
-  position: relative; /* Important pour positionner les images absolument à l'intérieur */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 250px; /* Augmentez encore l'espace en bas */
+nav#navmenu .sub-menu a:hover {
+  color: #6cad2a !important;
 }
 
-.risques-sanitaires img.image-risque,
-.risques-matériels img.image-risque {
-  bottom: -100px; /* Valeur de bottom encore plus négative - À AJUSTER */
-  transform: translateX(-50%); /* Ajuste le centrage horizontal */
-  border-radius: 100px;
-  margin-top: -150px;
-
+nav#navmenu .sub-menu {
+  border-radius: 15px;
 }
 
-  .risques h2{
-    text-align: center;
-  }
+nav#navmenu a {
+  transition: all 300ms ease; /* Ajout de la transition */
+}
+
+nav#navmenu a:hover {
+  color: #6cad2a !important;
+  text-decoration: underline;
+
+}
